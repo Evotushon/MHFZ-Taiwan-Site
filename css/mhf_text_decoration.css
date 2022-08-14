@@ -1,0 +1,340 @@
+@charset "utf-8";
+/*～～～文字装飾系CSS定義～～～*/
+
+/*------行揃え------*/
+
+/*中央寄せ*/
+.center_align {
+	text-align: center;
+}
+
+/*右寄せ*/
+.right_align {
+	text-align: right;
+}
+
+/*左寄せ*/
+.left_align {
+	text-align: left;
+}
+
+strong {
+	font-weight: bold;
+	color: #C73723;
+}
+
+.font-larger {
+	line-height: 130%;
+	font-size: larger;
+}
+
+.font-fix-min {
+	font-size: 10pt;
+	line-height: 10pt;
+}
+
+.text-border {
+	padding: 1px;
+	border: 1px solid #000000;
+	background-color: #FCC592;
+	line-height: 160%;
+}
+
+.text-border2 {
+	padding: 8px 12px 8px 12px;
+	margin: 8px 24px 0px 24px;
+	border: 1px solid #000000;
+	line-height: 130%;
+}
+
+.text-border3 {
+	padding: 8px 12px 8px 12px;
+	margin: -1px 24px 0px 24px;
+	border: 1px solid #000000;
+	line-height: 130%;
+}
+
+.text-border4 {
+	padding: 0px 0px 0px 0px;
+	margin: -2px 0px 0px 0px;
+	border: 0px;
+	line-height: 130%;
+	text-align: center;
+	clear:left;
+}
+
+.text-border5 {
+	padding: 8px 12px 8px 12px;
+	margin: 8px 24px 0px 24px;
+	border: 1px solid #FF6633;
+	line-height: 130%;
+}
+
+
+/*------ 見出し ------*/
+
+
+/*------リンク系------*/
+
+/*矢印リンク*/
+.link_arrow a{
+	background-image: url(../images/common/link_arrow.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 16px;
+	color: #00EAEA;
+}
+
+/*水色文字リンク*/
+
+/*別名で定義されているページがあります之で、今後必要に応じて使用して下さい*/
+
+a:link .bluelink {
+	color: #0b5aff;
+	text-decoration: none;
+}
+a:visited .bluelink {
+	text-decoration: none;
+	color: #0d00f7;
+}
+a:hover .bluelink {
+	text-decoration: underline;
+	color: #0b8bff;
+}
+a:active .bluelink {
+	text-decoration: underline;
+}
+
+
+/*～～～レガシー定義--以下は互換性確保之為に残している定義です。使用しないでください～～～*/
+
+/* mhf_layout_sub.css にて定義されていました（←コメントアウト済み）*/
+/* mhf_other_text.css にて定義されていました（←コメントアウト済み）*/
+
+.text_area {
+	/*margin: 8px 24px 0px 24px;*/
+	margin:0px 24px 0px 24px;
+}
+
+p.indent {
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+.table01 {
+	border-top: 1px solid #400000;
+	border-left: 1px solid #400000;
+	border-right: none;
+	border-bottom: none;
+	margin: 0px auto;
+}
+
+.table01 td {
+	border-right: 1px solid #400000;
+	border-bottom: 1px solid #400000;
+	border-left: none;
+	border-top: none;
+	padding: 2px;
+}
+
+.image_area {
+	margin: 18px 0px 14px 0px;
+}
+
+.top_image_area {
+	margin: 10px 0px 14px 0px;
+}
+
+.text_area2 {
+	margin: 3px 24px 12px 24px;
+}
+
+.text_area3 {
+	margin: 0px 0px 0px -4px;
+}
+
+
+p.indent2 {
+	margin-left: 2em;
+	text-indent: -1em;
+}
+
+.text_area4 {
+	margin-left: 1em;	
+}
+
+.text_area5 {
+	margin-left: 2em;	
+}
+
+.text_area6 {
+	margin: 20px 24px 15px;
+}
+
+/* スキル一覧 */
+/*-----------------------------------------------------テーブル中身*/
+
+#skill_data {
+	width: 500px;
+	margin:5px 0;
+	padding: 0px;
+}
+
+
+
+#skill_data th,td {
+margin:5px;
+padding:5px 2px;
+}
+
+#skill_data caption {
+text-align:left;
+margin:0;
+padding:0;
+}
+
+#skill_data caption span {
+	display: none;
+}
+
+
+#skill_data th.kind{
+background-color:#b8e990;
+text-align:center;
+color:#333333;
+width:17%;
+} 
+
+#skill_data th.point{
+background-color:#edddc3;
+text-align:center;
+color:#333333;
+width:10%;
+} 
+
+#skill_data th.effect{
+background-color:#d3cec1;
+text-align:center;
+width:auto;
+} 
+
+#skill_data th.name{
+background-color:#eed6d2;
+text-align:center;
+color:#333333;
+width:30%;
+} 
+
+
+#skill_data td.kind{
+background-color:#c5edc8;
+text-align:center;
+} 
+
+#skill_data td.point{
+background-color:#f0f5cd;
+text-align:center;
+} 
+
+#skill_data td.effect{
+background-color:#eaebdf;
+
+} 
+
+#skill_data td.name{
+background-color:#faeddd;
+} 
+
+#skill_data td.name_red{
+background-color:#ff0000;
+
+} 
+
+
+/*----------------------------------------------------- リード文 */
+#read {
+	position:relative;
+	overflow:hidden;text-align:left;
+}
+
+
+/*----------------------------------------------------- 一覧 */
+#skill_data {
+	width: 500px;
+}
+
+#skill_data table {
+	border: 1px #aaa solid;
+	width:100%; max-width:490px;
+	height: auto;
+	margin:30px 0;
+}
+#skill_data table:first-of-type {
+	margin-top:10px;
+}
+
+#skill_data th,td {
+	margin:5px;
+	padding:5px 2px;
+	line-height:120%;
+}
+
+#skill_data caption {
+	text-align:left;
+	margin:0;
+	padding:0;
+}
+
+#skill_data caption span {
+	display: none;
+}
+
+
+#skill_data th.kind{
+	background-color:#c0c0ff;
+	font-size:13px;
+	text-align:center;
+	color:#333333;
+	width:19%;
+}
+
+#skill_data th.origin{
+	background-color:#b8f0a0;
+	font-size:13px;
+	text-align:center;
+	color:#333333;
+	width:17%;
+}
+
+#skill_data th.effect{
+	background-color:#d3cec1;
+	text-align:center;
+	width:auto;
+}
+
+#skill_data th.name{
+	background-color:#f0d0a0;
+	text-align:center;
+	color:#333333;
+	width:26%;
+}
+
+
+#skill_data td.kind{
+	background-color:#ddddff;
+	text-align:center;
+}
+
+#skill_data td.origin{
+	background-color:#c5edc8;
+	text-align:center;
+}
+
+#skill_data td.effect{
+	background-color:#eaebdf;
+	font-size:x-small;
+}
+
+#skill_data td.name{
+	background-color:#ffeecc;
+}

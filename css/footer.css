@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* FOOTER
+================= */
+#footer {
+    background: url(../images/footer_bg00.gif) left top repeat;
+    width: 100%;
+    min-width: 1000px;
+    height: 60px;
+    color: #cccccc;
+    font-size: 12px;
+}
+
+#bottomBar {
+    background: url(../images/footer_bg01.gif) left top repeat-x;
+    width: 100%;
+    height: 60px;
+}
+
+#cr-text {
+    width: 80%;
+    padding-top: 10px;
+    margin: 0 auto;
+    padding-left: 5%;
+    float: left;
+}
+
+#game-rating {
+    height: 30px;
+    padding-top: 8px;
+    margin: 0 auto;
+    padding-right: 5%;
+    float: right;
+}

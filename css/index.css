@@ -1,0 +1,1700 @@
+/* シジル一覧 */
+
+
+/*----------------------------------------------------- メニュー */
+
+#menu {
+	margin-top: 10px;
+}
+
+
+#menu ul {
+	width: 500px;
+	height: 15px;
+	margin: 5px 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+#menu ul li {
+	height: 15px;
+	margin-left: 10px;
+	float: left;
+}
+
+#menu ul li a {
+	background-position: left top;
+	background-repeat: no-repeat;
+	height: 15px;
+	display: block;
+}
+#menu ul li a:hover { background-position: left bottom; }
+
+#menu ul li a span { display: none; }
+
+
+/*耐性系*/
+#menu ul li.menu_tansei {
+	width:57px;
+	background-image:url(../images/data/btn_tansei.jpg);
+}
+
+#menu ul li.menu_tansei a {
+	width:57px;
+	background-image:url(../images/data/btn_tansei.jpg);}
+
+#menu ul li.menu_tansei a:hover {
+	width:57px;
+	background-image:url(../images/data/btn_tansei.jpg);
+}
+
+/*状態異常系*/
+#menu ul li.menu_joutai {
+	width:85px;
+	background-image:url(../images/data/btn_joutai.jpg);
+}
+
+#menu ul li.menu_joutai a {
+	width:85px;
+	background-image:url(../images/data/btn_joutai.jpg);}
+
+#menu ul li.menu_joutai a:hover {
+	width:85px;
+	background-image:url(../images/data/btn_joutai.jpg);
+	background-position: 0px -15px;
+}
+
+/*そ之他之ダメージ系*/
+#menu ul li.menu_damage {
+	width:115px;
+	background-image:url(../images/data/btn_damage.jpg);
+}
+
+#menu ul li.menu_damage a {
+	width:115px;
+	background-image:url(../images/data/btn_damage.jpg);}
+
+#menu ul li.menu_damage a:hover {
+	width:115px;
+	background-image:url(../images/data/btn_damage.jpg);
+}
+
+/*道具使用・調合系*/
+#menu ul li.menu_item {
+	width:139px;
+	background-image:url(../images/data/btn_item.jpg);
+}
+
+#menu ul li.menu_item a {
+	width:139px;
+	background-image:url(../images/data/btn_item.jpg);}
+
+#menu ul li.menu_item a:hover {
+	width:139px;
+	background-image:url(../images/data/btn_item.jpg);
+}
+
+
+
+/*-------------------------------------------------------- 一列目 */
+/*體術技能*/
+#menu ul li.menu_physical { width: 88px; }
+#menu ul li.menu_physical a {
+	width: 88px;
+	background-image: url(../images/data/btn_physical.jpg);
+}
+
+/*技巧技能*/
+#menu ul li.menu_technical { width: 88px; }
+#menu ul li.menu_technical a {
+	width: 88px;
+	background-image: url(../images/data/btn_technical.jpg);
+}
+
+/*特殊技能*/
+#menu ul li.menu_special { width: 88px; }
+#menu ul li.menu_special a {
+	width: 88px;
+	background-image: url(../images/data/btn_special.jpg);
+}
+
+/*体力スタミナ系*/
+#menu ul li.menu_stamina { width: 88px; }
+#menu ul li.menu_stamina a {
+	width: 88px;
+	background-image: url(../images/data/btn_stamina.jpg);
+}
+
+/*攻擊系*/
+#menu ul li.menu_kougeki { width: 57px; }
+#menu ul li.menu_kougeki a {
+	width: 57px;
+	background-image: url(../images/data/btn_kougeki.jpg);
+}
+
+/*防御系*/
+#menu ul li.menu_bougyo { width: 57px; }
+#menu ul li.menu_bougyo a {
+	width: 57px;
+	background-image: url(../images/data/btn_bougyo.jpg);
+}
+
+/*剣士系*/
+#menu ul li.menu_kenshi { width: 56px; }
+#menu ul li.menu_kenshi a {
+	width: 56px;
+	background-image: url(../images/data/btn_kenshi.jpg);
+}
+
+/*ガンナー系*/
+#menu ul li.menu_gunner { width: 77px; }
+#menu ul li.menu_gunner a {
+	width: 77px;
+	background-image: url(../images/data/btn_gunner.jpg);
+}
+
+/*-------------------------------------------------------- 二列目 */
+
+/*状態異常系*/
+#menu ul li.menu_ijou { width: 85px; }
+#menu ul li.menu_ijou a {
+	width: 85px;
+	background-image: url(../images/data/btn_joutai.jpg);
+}
+
+
+
+/*道具使用・調合系*/
+#menu ul li.menu_item1 { width: 122px; }
+#menu ul li.menu_item1 a {
+	width: 122px;
+	background-image: url(../images/data/btn_item1.jpg);
+}
+
+/*---------------------------------------------------------- 三列目 */
+
+/*マップ・探知系*/
+#menu ul li.menu_map { width: 98px; }
+#menu ul li.menu_map a {
+	width: 98px;
+	background-image: url(../images/data/btn_map.jpg);
+}
+
+/*採集・運搬系*/
+#menu ul li.menu_saishuu { width: 95px; }
+#menu ul li.menu_saishuu a {
+	width: 95px;
+	background-image: url(../images/data/btn_saishuu.jpg);
+}
+
+/*報酬系*/
+#menu ul li.menu_houshuu { width: 57px; }
+#menu ul li.menu_houshuu a {
+	width: 57px;
+	background-image: url(../images/data/btn_houshuu.jpg);
+}
+
+/*そ之他*/
+#menu ul li.menu_other { width: 58px; }
+#menu ul li.menu_other a {
+	width: 58px;
+	background-image: url(../images/data/btn_other.jpg);
+}
+
+
+
+
+
+/*----------------------------------------------------- テーブル中身 */
+
+#sigil_data {
+	margin: 20px 0;
+}
+
+#sigil_data table {
+	border: 1px #aaa solid;
+	width: 500px;
+	margin: 20px 0;
+}
+
+#sigil_data table caption {
+	text-align: left;
+	margin: 0;
+	padding: 0;
+}
+#sigil_data table caption span {
+	display: none;
+}
+
+#sigil_data table th {
+	padding: 6px;
+}
+#sigil_data table th.kind {
+	background-color: #b8e990;
+	text-align: center;
+	color: #333333;
+	width: 84px;
+}
+#sigil_data table th.name {
+	background-color: #eed6d2;
+	text-align: center;
+	color: #333333;
+	width: 114px;
+}
+#sigil_data table th.effect {
+	background-color: #d3cec1;
+	text-align: center;
+}
+
+#sigil_data table td {
+	padding: 3px 5px;
+}
+
+#sigil_data table td.kind {
+	background-color: #c5edc8;
+}
+#sigil_data table td.name {
+	background-color: #faeddd;
+}
+#sigil_data table td.effect {
+	background-color: #eaebdf;
+}
+
+
+em.note {
+	
+	font-style:normal;
+	color:#f00;
+}
+/* ハンターランク */
+
+/* ss画像左寄せ */
+.img_ss{float:left;
+margin-right:5px;}
+
+
+.tx10{
+    
+}
+
+
+/*-------------------------オンラインマニュアルリンクボタン*/
+
+.btn_onm_area{
+margin:0 10px 0px 320px;}
+
+.btn_onm_01 a:link{
+margin:5px;
+text-decoration:none;
+display:block;
+background:url(../images/data/btn_onm.gif) no-repeat;
+background-position:0px -25px;
+line-height:180%;
+text-indent:75px;
+}
+
+.btn_onm_01 a:visited{
+text-decoration:none;
+display:block;
+background:url(../images/data/btn_onm.gif) no-repeat;
+background-position:0px -25px;
+line-height:180%;
+text-indent:75px;}
+
+.btn_onm_01 a:hover{
+text-decoration:underline;
+background:url(../images/data/btn_onm.gif) no-repeat;
+background-position:0px 0px;
+line-height:180%;
+text-indent:75px;}
+
+
+
+
+/*------------------------------------------HRPテーブル*/
+
+#hrp_data {
+	width: 500px;
+	margin:5px 0;
+	padding: 0px;
+	text-align:center;
+}
+
+#hrp_data table {
+border: 1px #aaa solid;
+width: 480px;
+height: auto;
+margin:0 auto;
+}
+
+#hrp_data th,td {
+margin:0px;
+padding:8px;
+}
+
+#hrp_data caption {
+font-weight:bold;
+color:#990000;
+text-align:left;
+text-indent:10px;
+margin:0;
+padding:0;
+}
+
+
+/*-----------------------------------------------------th*/
+
+/*ハンターランク*/
+#hrp_data th.date_hr{
+background-color:#009900;
+text-align:center;
+color:#fff;
+width:25%;
+}
+
+/*HRP*/
+#hrp_data th.date_hrp{
+background-color:#d3cec1;
+text-align:center;
+color:#333;
+width:35%;
+}
+
+/*次*/
+#hrp_data th.date_next{
+background-color:#d3cec1;
+text-align:center;
+color:#333;
+width:auto;
+} 
+
+
+
+/*--------------------------------------------------td主に色*/
+
+/*ハンターランク黃綠*/
+#hrp_data td.date_hr01{
+text-align:center;
+background-color:#CCFF33;
+color:#333;
+padding:3px;
+font-weight:bold;
+} 
+
+
+/*tdパターン1*/
+#hrp_data td.date_hrp01{
+text-align:right;
+background-color:#eee8aa;
+padding:5px;
+} 
+
+/*tdパターン1*/
+#hrp_data td.date_hrp02{
+text-align:right;
+background-color:#fffacd;
+padding:5px;
+} 
+
+
+/*試験*/
+#hrp_data td.date_text{
+border: 2px #660000 solid;
+text-align:center;
+background-color:#cc0000;
+padding:5px;
+color:#FFFFFF;
+} 
+
+/* 調合リスト用 */
+
+/* 調合屋あるじ左寄せ */
+.img_aruji{float:left;}
+
+
+.tx10{
+    
+}
+
+.text_top{
+margin-left:5px
+}
+
+
+
+/*----------------------------------------------------------テーブル*/
+/* 大枠 */
+
+.rookie_item{
+
+color:#993333;}
+
+
+/*-----------------------------------------------------テーブル中身*/
+
+#skill_data {
+	width: 500px;
+	margin:5px 0;
+	padding: 0px;
+}
+
+#skill_data table {
+border: 1px #aaa solid;
+width: 500px;
+height: auto;
+margin:10px 0;
+}
+
+#skill_data th,td {
+margin:5px;
+padding:5px 2px;
+}
+
+#skill_data caption {
+text-align:left;
+margin:0;
+padding:0;
+}
+
+#skill_data caption span {
+	display: none;
+}
+
+
+#skill_data th.kind{
+background-color:#b8e990;
+text-align:center;
+color:#333333;
+width:17%;
+} 
+
+#skill_data th.point{
+background-color:#edddc3;
+text-align:center;
+color:#333333;
+width:10%;
+} 
+
+#skill_data th.effect{
+background-color:#d3cec1;
+text-align:center;
+width:auto;
+} 
+
+#skill_data th.name{
+background-color:#eed6d2;
+text-align:center;
+color:#333333;
+width:30%;
+} 
+
+
+#skill_data td.kind{
+background-color:#c5edc8;
+text-align:center;
+} 
+
+#skill_data td.point{
+background-color:#f0f5cd;
+text-align:center;
+} 
+
+#skill_data td.effect{
+background-color:#eaebdf;
+
+} 
+
+#skill_data td.name{
+background-color:#faeddd;
+} 
+
+#skill_data td.name_red{
+background-color:#ff0000;
+
+} 
+
+/* 調合リスト用 */
+
+/* 調合屋あるじ左寄せ */
+.img_aruji{float:left;}
+
+
+.tx10{
+    
+}
+
+
+/*------------------------------------------------------------一列目*/
+
+/* 大枠 */
+#alchemy_menu01 {
+	height: 15px;
+	width: 500px;
+	margin:5px 0;
+	padding: 0px;
+}
+
+#alchemy_menu01 ul{
+	height: 15px;
+	width: 500px;
+	list-style-type: none;
+  margin:0;
+  padding:0;
+}
+
+#alchemy_menu01 ul li{
+	float: left;
+	list-style-type: none;
+	display: block;
+}
+
+#alchemy_menu01 ul li a{
+	display: block;
+	height: 15px;
+	width: auto;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+#alchemy_menu01 ul li a span {
+	display: none;
+}
+
+
+/*一般消費道具*/
+#alchemy_menu01 ul li.m01_item {
+	width:100px;
+ margin-left:20px;
+	background-image:url(../images/data/btn_item.jpg);
+}
+
+#alchemy_menu01 ul li.m01_item a {
+	background-image:url(../images/data/btn_item.jpg);}
+
+#alchemy_menu01 ul li.m01_item a:hover {
+	width:100px;
+	background-image:url(../images/data/btn_item.jpg);
+	background-position: 0px -15px;
+}
+
+/*採集*/
+#alchemy_menu01 ul li.m01_saisyu {
+	width:43px;
+ margin-left:15px;
+	background-image:url(../images/data/btn_saisyu.jpg);
+}
+
+#alchemy_menu01 ul li.m01_saisyu a {
+	width:43px;
+	background-image:url(../images/data/btn_saisyu.jpg);}
+
+#alchemy_menu01 ul li.m01_saisyu a:hover {
+	width:43px;
+	background-image:url(../images/data/btn_saisyu.jpg);
+	background-position: 0px -15px;
+}
+
+/*クエストメンバー補助*/
+#alchemy_menu01 ul li.m01_member {
+	width:105px;
+ margin-left:15px;
+	background-image:url(../images/data/btn_member.jpg);
+}
+
+#alchemy_menu01 ul li.m01_member a {
+	width:105px;
+	background-image:url(../images/data/btn_member.jpg);}
+
+#alchemy_menu01 ul li.m01_member a:hover {
+	width:105px;
+	background-image:url(../images/data/btn_member.jpg);
+	background-position: 0px -15px;
+}
+
+/*生肉系*/
+#alchemy_menu01 ul li.m01_niku {
+	width:56px;
+ margin-left:15px;
+	background-image:url(../images/data/btn_niku.jpg);
+}
+
+#alchemy_menu01 ul li.m01_niku a {
+	width:56px;
+	background-image:url(../images/data/btn_niku.jpg);}
+
+#alchemy_menu01 ul li.m01_niku a:hover {
+	width:56px;
+	background-image:url(../images/data/btn_niku.jpg);
+	background-position: 0px -15px;
+}
+
+
+/*---------------------------------------------------------二列目*/
+/* 大枠 */
+#alchemy_menu02 {
+	height: 15px;
+	width: 500px;
+	margin:5px 0;
+	padding: 0px;
+}
+
+#alchemy_menu02 ul{
+	height: 15px;
+	width: 500px;
+	list-style-type: none;
+  margin:0;
+  padding:0;
+}
+
+#alchemy_menu02 ul li{
+	float: left;
+	list-style-type: none;
+	display: block;
+}
+
+#alchemy_menu02 ul li a{
+	display: block;
+	height: 15px;
+	width: auto;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+#alchemy_menu02 ul li a span {
+	display: none;
+}
+
+/*素材*/
+#alchemy_menu02 ul li.m02_sozai {
+	width:42px;
+ margin-left:20px;
+	background-image:url(../images/data/btn_sozai.jpg);
+}
+
+#alchemy_menu02 ul li.m02_sozai a {
+	width:42px;
+	background-image:url(../images/data/btn_sozai.jpg);}
+
+#alchemy_menu02 ul li.m02_sozai a:hover {
+	width:42px;
+	background-image:url(../images/data/btn_sozai.jpg);
+	background-position: 0px -15px;
+}
+
+/*投擲*/
+#alchemy_menu02 ul li.m02_touteki {
+	width:44px;
+ margin-left:15px;
+	background-image:url(../images/data/btn_touteki.jpg);
+}
+
+#alchemy_menu02 ul li.m02_touteki a {
+	width:44px;
+	background-image:url(../images/data/btn_touteki.jpg);}
+
+#alchemy_menu02 ul li.m02_touteki a:hover {
+	width:44px;
+	background-image:url(../images/data/btn_touteki.jpg);
+	background-position: 0px -15px;
+}
+
+/*陷阱*/
+#alchemy_menu02 ul li.m02_trap {
+	width:44px;
+ margin-left:15px;
+	background-image:url(../images/data/btn_trap.jpg);
+}
+
+#alchemy_menu02 ul li.m02_trap a {
+	width:44px;
+	background-image:url(../images/data/btn_trap.jpg);}
+
+#alchemy_menu02 ul li.m02_trap a:hover {
+	width:44px;
+	background-image:url(../images/data/btn_trap.jpg);
+	background-position: 0px -15px;
+}
+
+/*彈丸*/
+#alchemy_menu02 ul li.m02_shot {
+	width:43px;
+ margin-left:15px;
+	background-image:url(../images/data/btn_shot.jpg);
+}
+
+#alchemy_menu02 ul li.m02_shot a {
+	width:43px;
+	background-image:url(../images/data/btn_shot.jpg);}
+
+#alchemy_menu02 ul li.m02_shot a:hover {
+	width:43px;
+	background-image:url(../images/data/btn_shot.jpg);
+	background-position: 0px -15px;
+}
+
+/*瓶*/
+#alchemy_menu02 ul li.m02_bin {
+	width:44px;
+ margin-left:15px;
+	background-image:url(../images/data/btn_bin.jpg);
+}
+
+#alchemy_menu02 ul li.m02_bin a {
+	width:44px;
+	background-image:url(../images/data/btn_bin.jpg);}
+
+#alchemy_menu02 ul li.m02_bin a:hover {
+	width:44px;
+	background-image:url(../images/data/btn_bin.jpg);
+	background-position: 0px -15px;
+}
+
+/*----------------------------------------------------------三列目*/
+/* 大枠 */
+#alchemy_menu03 {
+	height: 15px;
+	width: 500px;
+	margin:5px 0;
+	padding: 0px;
+}
+
+#alchemy_menu03 ul{
+	height: 15px;
+	width: 500px;
+	list-style-type: none;
+  margin:0;
+  padding:0;
+}
+
+#alchemy_menu03 ul li{
+	float: left;
+	list-style-type: none;
+	display: block;
+}
+
+#alchemy_menu03 ul li a{
+	display: block;
+	height: 15px;
+	width: auto;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+#alchemy_menu03 ul li a span {
+	display: none;
+}
+
+/*雜貨*/
+#alchemy_menu03 ul li.m03_goods {
+	width:42px;
+ margin-left:20px;
+	background-image:url(../images/data/btn_goods.jpg);
+}
+
+#alchemy_menu03 ul li.m03_goods a {
+	width:42px;
+	background-image:url(../images/data/btn_goods.jpg);}
+
+#alchemy_menu03 ul li.m03_goods a:hover {
+	width:42px;
+	background-image:url(../images/data/btn_goods.jpg);
+	background-position: 0px -15px;
+}
+
+/*武具素材*/
+#alchemy_menu03 ul li.m03_arms {
+	width:70px;
+ margin-left:15px;
+	background-image:url(../images/data/btn_arms.jpg);
+}
+
+#alchemy_menu03 ul li.m03_arms a {
+	width:70px;
+	background-image:url(../images/data/btn_arms.jpg);}
+
+#alchemy_menu03 ul li.m03_arms a:hover {
+	width:70px;
+	background-image:url(../images/data/btn_arms.jpg);
+	background-position: 0px -15px;
+}
+
+/*重要道具*/
+#alchemy_menu03 ul li.m03_keyitem {
+	width:80px;
+ margin-left:15px;
+	background-image:url(../images/data/btn_keyitem.jpg);
+}
+
+#alchemy_menu03 ul li.m03_keyitem a {
+	width:80px;
+	background-image:url(../images/data/btn_keyitem.jpg);}
+
+#alchemy_menu03 ul li.m03_keyitem a:hover {
+	width:80px;
+	background-image:url(../images/data/btn_keyitem.jpg);
+	background-position: 0px -15px;
+}
+
+/*強化道具*/
+#alchemy_menu03 ul li.m03_powerup {
+	width:80px;
+ margin-left:15px;
+	background-image:url(../images/data/btn_powerup.jpg);
+}
+
+#alchemy_menu03 ul li.m03_powerup a {
+	width:80px;
+	background-image:url(../images/data/btn_powerup.jpg);}
+
+#alchemy_menu03 ul li.m03_powerup a:hover {
+	width:80px;
+	background-image:url(../images/data/btn_powerup.jpg);
+	background-position: 0px -15px;
+}
+
+/*錬金術*/
+#alchemy_menu03 ul li.m03_alchemy {
+	width:60px;
+ margin-left:15px;
+	background-image:url(../images/data/btn_alchemy.jpg);
+}
+
+#alchemy_menu03 ul li.m03_alchemy a {
+	width:60px;
+	background-image:url(../images/data/btn_alchemy.jpg);}
+
+#alchemy_menu03 ul li.m03_alchemy a:hover {
+	width:60px;
+	background-image:url(../images/data/btn_alchemy.jpg);
+	background-position: 0px -15px;
+}
+
+
+
+/*----------------------------------------------------------テーブル*/
+/* 大枠 */
+
+.rookie_item{
+
+color:#993333;}
+
+
+/*-----------------------------------------------------調合テーブル*/
+
+#alchemy_data {
+	width: 500px;
+	margin:5px 0;
+	padding: 0px;
+}
+
+#alchemy_data table {
+border: 1px #aaa solid;
+width: 500px;
+height: auto;
+margin:10px 0;
+}
+
+#alchemy_data th,td {
+margin:5px;
+padding:5px 3px;
+}
+
+#alchemy_data caption {
+text-align:left;
+margin:0;
+padding:0;
+}
+
+#alchemy_data caption span {
+	display: none;
+}
+
+
+#alchemy_data th.finish{
+background-color:#b8e990;
+text-align:center;
+color:#333333;
+width:22%;
+} 
+
+#alchemy_data th.item{
+background-color:#edddc3;
+text-align:center;
+color:#333333;
+width:40%;
+} 
+
+#alchemy_data th.note{
+background-color:#d3cec1;
+text-align:center;
+color:#333333;
+width:auto;
+} 
+
+#alchemy_data td.finish{
+background-color:#c5edc8;
+} 
+
+#alchemy_data td.item{
+background-color:#f0f5cd;
+} 
+
+#alchemy_data td.note{
+background-color:#eaebdf;
+
+color:#766C7B;
+} 
+/* 食事レシピ用 */
+
+/* 食事レシピss画像左寄せ */
+.img_ss{float:left;
+margin-right:5px;}
+
+
+.tx10{
+   
+}
+
+
+/*------------------------------------------------------------タブ*/
+
+/* 大枠 */
+#dish_menu {
+	height: 43px;
+	width: 500px;
+	margin:0;
+	padding:0;
+}
+
+#dish_menu ul{
+	height: 43px;
+	width: 500px;
+	list-style-type: none;
+  margin:0;
+  padding:0;
+}
+
+#dish_menu ul li{
+	float: left;
+	list-style-type: none;
+	display: block;
+}
+
+#dish_menu ul li a{
+	display: block;
+	height: 43px;
+	width: auto;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+#dish_menu ul li a span {
+	display: none;
+}
+
+
+
+
+/*繁殖期*/
+#dish_menu ul li.btn_breeding_act {
+	width:167px;
+	background-image:url(../images/data/btn_breeding.jpg);
+}
+
+#dish_menu ul li.btn_breeding {
+	width:167px;
+	background-image:url(../images/data/btn_breeding.jpg);
+	background-position: 0px -43px;
+}
+
+
+#dish_menu ul li.btn_breeding a {
+	background-image:url(../images/data/btn_breeding.jpg);
+	background-position: 0px -43px;
+}
+
+#dish_menu ul li.btn_breeding a:hover {
+	width:167px;
+	background-image:url(../images/data/btn_breeding.jpg);
+	background-position: 0px 0px;
+}
+
+
+/*温暖期*/
+
+#dish_menu ul li.btn_warm_act {
+	width:162px;
+	background-image:url(../images/data/btn_warm.jpg);
+}
+
+
+#dish_menu ul li.btn_warm {
+	width:162px;
+	background-image:url(../images/data/btn_warm.jpg);
+	background-position: 0px -43px;
+}
+
+#dish_menu ul li.btn_warm a {
+	width:162px;
+	background-image:url(../images/data/btn_warm.jpg);
+	background-position: 0px -43px;
+}
+
+#dish_menu ul li.btn_warm a:hover {
+	width:162px;
+	background-image:url(../images/data/btn_warm.jpg);
+	background-position: 0px 0px;
+}
+
+
+
+/*寒冷期*/
+#dish_menu ul li.btn_cold_act {
+	width:171px;
+	background-image:url(../images/data/btn_cold.jpg);
+}
+
+
+#dish_menu ul li.btn_cold {
+	width:171px;
+	background-image:url(../images/data/btn_cold.jpg);
+	background-position: 0px -43px;
+}
+
+#dish_menu ul li.btn_cold a {
+	width:171px;
+	background-image:url(../images/data/btn_cold.jpg);
+	background-position: 0px -43px;
+}
+
+#dish_menu ul li.btn_cold a:hover {
+	width:171px;
+	background-image:url(../images/data/btn_cold.jpg);
+	background-position: 0px 0px;
+}
+
+
+
+
+/*-----------------------------------------------------レシピテーブル*/
+
+#recipe_data {
+	width: 500px;
+	margin:5px 0;
+	padding: 0px;
+}
+
+#recipe_data table {
+border: 1px #aaa solid;
+width: 500px;
+height: auto;
+margin:0;
+}
+
+#recipe_data th,td {
+margin:0px;
+padding:0px;
+}
+
+#recipe_data caption {
+text-align:left;
+margin:0;
+padding:0;
+}
+
+#recipe_data caption span {
+	display: none;
+}
+
+
+/*-----------------------------------------------------th*/
+
+/*繁殖期*/
+#recipe_data th.food_breeding{
+background-color:#b8e990;
+text-align:center;
+color:#333333;
+width:auto;
+}
+
+/*温暖期*/
+#recipe_data th.food_warm{
+background-color:#FF6600;
+text-align:center;
+color:#333333;
+width:auto;
+}
+
+/*寒冷期*/
+#recipe_data th.food_cold{
+background-color:#3366CC;
+text-align:center;
+color:#333333;
+width:auto;
+} 
+
+#recipe_data th.re01{
+background-color:#eed6d2;
+text-align:center;
+color:#333333;
+width:auto;
+} 
+
+#recipe_data th.re02{
+background-color:#eed6d2;
+text-align:center;
+color:#333333;
+width:auto;
+} 
+
+
+#recipe_data th.hp{
+background-color:#d3cec1;
+text-align:center;
+color:#333333;
+width:28px;
+} 
+
+#recipe_data th.stamina{
+background-color:#d3cec1;
+text-align:center;
+color:#333333;
+width:28px;
+} 
+
+#recipe_data th.attack{
+background-color:#d3cec1;
+text-align:center;
+color:#333333;
+width:28px;
+} 
+
+#recipe_data th.defense{
+background-color:#d3cec1;
+text-align:center;
+color:#333333;
+width:28px;
+} 
+
+
+
+/*--------------------------------------------------td主に色*/
+
+/*繁殖期*/
+#recipe_data td.food_breeding{
+background-color:#ccff9a;
+padding:5px;
+} 
+
+/*温暖期*/
+#recipe_data td.food_warm{
+background-color:#FF9966;
+padding:5px;
+} 
+
+/*寒冷期*/
+#recipe_data td.food_cold{
+background-color:#99CCCC;
+padding:5px;
+} 
+
+#recipe_data td.re01{
+background-color:#faecdd;
+padding:5px;
+} 
+
+#recipe_data td.re02{
+background-color:#faecdd;
+padding:5px;
+} 
+
+#recipe_data td.hp{
+background-color:#ededed;
+} 
+
+#recipe_data td.stamina{
+background-color:#ededed;
+} 
+
+#recipe_data td.attack{
+background-color:#ededed;
+} 
+
+#recipe_data td.defense{
+background-color:#ededed;
+} 
+
+
+/*-----オススメテーブル内テキスト*/
+
+.pickup{font-weight:bold;
+color:#CC3333;}
+
+
+/*==============================HISTORY==============================*/
+.link_year ul{
+	margin:24px 0 8px;
+	font-size:14px;
+	text-align:center;
+}
+	.link_year ul li{
+		background:url(../images/menu_arrow.gif) left center no-repeat;
+		padding-left:14px;
+		padding-right:8px;
+		display:inline;
+	}
+		.link_year ul li span.current{ font-weight:bold; }
+
+#update_list_title{
+margin-top:20px;
+text-align:center;
+}
+
+
+ul#update_list{
+margin:20px 0 0 20px;
+padding:0;
+list-style:none;
+}
+	ul#update_list li{
+	margin-top:10px;
+	}
+
+ul#update_list li .subhead{
+background:url(../images/line.jpg) left bottom repeat-x;
+width:444px;
+height:32px;
+}
+	ul#update_list li .subhead p{
+	background:url(../images/icon.jpg) left center no-repeat;
+	padding-left:26px;
+	line-height:32px;
+	font-size:14px;
+	font-weight:bold;
+	text-align:left;
+	}
+
+ul#update_list li .info_box{
+padding:6px 12px
+}
+	ul#update_list li .info_box .banner{
+	}
+	ul#update_list li .info_box p.link{
+	margin-top:2px;
+	}
+	ul#update_list li .info_box p.link a{
+	text-decoration:underline;
+}
+
+
+p.update_note{
+width:460px;
+margin:40px 0 20px 12px;
+padding-left:1.0em !important;
+text-indent:-1.0em !important;
+}
+
+
+/* 壁紙ボックス全体マージン */
+
+.wp_box_top{
+width:320px;
+margin:10px auto;
+}
+
+.wp_box{
+width:440px;
+margin:10px auto;
+}
+
+/* 壁紙ボックス左配置 */
+
+.wp_left{
+width:210px;
+height:auto;
+float:left;
+}
+
+/* 壁紙ボックス右配置 */
+
+.wp_right{
+width:210px;
+height:auto;
+float:right;
+}
+
+/* フロート解除 */
+
+.float_clear{
+clear:both;
+}
+
+/* 壁紙ボックス内タイトル */
+
+.wp_tit{
+background:url(../images/tit_point.gif) left no-repeat;
+text-indent:16px;
+color:#330000;
+font-weight:bold;
+margin:8px 0 4px -4px;
+}
+
+/* 壁紙ボーダー */
+
+.wp_img{
+padding:3px;
+border:#995500 solid 1px;}
+
+
+/* 壁紙DLアイコン */
+.wp_icon_top{
+margin:10px 0;
+width:326px;
+text-align:center;}
+
+.wp_icon_top img{
+margin:0px 4px;
+text-align:center;}
+
+.wp_icon{
+margin:10px 0;
+width:206px;
+text-align:center;}
+.wp_icon02{ /* 20091016 Added */
+margin:10px 0 0 0;
+width:206px;
+text-align:center;}
+.wp_icon03{ /* 20091016 Added */
+margin:4px 0 10px 0;
+width:206px;
+text-align:center;}
+
+.wp_icon img, .wp_icon02 img, .wp_icon03 img{ /* 20091016 Modified */
+margin:0px 2px;
+text-align:center;}
+
+
+
+/* 操作説明壁紙・SS画像 */
+
+.wp_howto{
+float:left;
+margin-right:20px;
+}
+
+
+/* 20100714Added バックナンバーへのリンク*/
+div.bklink {
+	text-align:right;
+	font-weight:bold;
+	padding:10px 0 0 0;
+}
+.bklink p { margin:0.2em 0 0 0; }
+
+/*==================PV====================*/
+
+/*フォントクラス*/
+.txt-ms {
+    font-size: 80%;
+	margin: 5px 7px 10px 4px;
+}
+
+.txt-ml {
+	text-align:left;
+	padding:0px 10px 0px 10px;
+}
+
+.txt-mc {
+	text-align:left;
+	padding: 3px 20px 0px 20px;
+}
+
+.txt-me {
+	text-align: center;
+	color:#FF0000;
+	font-size:1.5em;
+	font-weight:bold;
+	padding-top:5px;
+}
+
+/************************/
+.box_all{
+	width:475px;
+	margin: 0px auto 20px auto;		
+}
+
+.sign_top {
+	width: 475px;
+	height: 80px;
+	padding-top:10px;
+}
+
+.sign_coments {
+	width: 475px;
+	/*height: 75px;*/
+	background-image: url(../images/img_txtarea.jpg);
+	background-repeat:no-repeat;
+	color:#dcdcdc;
+}
+
+.sign_main {
+	width: 475px;
+	height: 283px;
+	background-image: url(../images/img_movie.jpg);
+	background-repeat:no-repeat;
+	padding-top:2px;
+	padding-left:19px;
+}
+
+#sign_main169 {
+	width: 475px;
+	height: 283px;
+	background-image: url(../images/img_movie2.jpg);
+	background-repeat:no-repeat;
+	padding-top:2px;
+	padding-left:19px;
+}
+
+.sign_under {
+	width: 475px;
+	height: 65px;
+	background-image: url(../images/img_movieurl.jpg);
+	background-repeat:no-repeat;
+	padding-bottom:15px;	
+}
+
+.sign_under textarea{
+    background-color: transparent;
+    border-style: none;
+    color: #FFFFFF;
+    height: 30px;
+    width: 415px;
+	padding-top:22px;
+	padding-left:25px;
+	font-size:12px;	
+}
+
+
+
+/*===========================NEWS=============================*/
+
+.information_title_j {
+	height: 24px;
+	width: 430px;
+	margin: 0px auto;
+	background-image: url(../images/title_bg_j.gif);
+}
+
+.information_title {
+	height: 24px;
+	width: 430px;
+	margin: 0px auto;
+	background-image: url(../images/title_bg.gif);
+}
+
+.information_title_c {
+	height: 24px;
+	width: 468px;
+	background-image: url(../images/t_bg_c.gif);
+	background-position: center;
+}
+
+.information_title_r {
+	height: 24px;
+	width:  100%;
+	background-image: url(../images/t_bg_r.gif);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.information_title_l {
+	height: 24px;
+	width:  100%;
+	background-image: url(../images/t_bg_l.gif);
+	background-position: left;
+	background-repeat: no-repeat;
+}
+
+.information_list {
+	width: 480px;
+	margin: 4px auto;
+}
+
+.newstitle_area {
+	width: 500px;
+	margin: 10px auto;
+	background-color: #E8D9B9;
+}
+.newstitle_area table{
+	padding:5px;
+	background: url(../images/line.png) left bottom repeat-x;
+}
+.newstext_area {
+	width: 500px;
+	margin: 0px auto;
+	overflow: hidden;
+}
+.newstext_area img{ max-width:500px;}
+.newstext_area a, .newstext_area a:hover, .newstext_area a:link,
+.newstext_area a:visited, .newstext_area a:active{
+	text-decoration:underline;
+	color:blue;
+}
+
+
+.table01 {
+	max-width: 500px;
+}
+
+.text_area_info {
+	margin: 20px 7px 0px 7px;
+}
+
+.text_area_info2 {
+	padding: 11px 0px 2px 30px;
+	margin: 0px 0px 5px -2px;
+	font-size: 1.2em;
+	height: 24px;
+	width: 425px;
+	background-image: url(../images/title_bg.gif);
+	background-position: left 7px;
+	background-repeat: no-repeat;
+	color: #510906;
+}
+
+.text_area_info3 {
+	margin: 6px 0px 0px 0px;
+	margin-left: 7.5em;
+	text-indent: -7.5em;
+}
+
+.text_area_info4 {
+	margin: 6px 0px 0px 0px;
+	margin-left: 6.5em;
+	text-indent: -6.5em;
+}
+
+.text_area_info5 {
+	margin: 6px 0px 0px 0px;
+	margin-left: 6em;
+	text-indent: -6em;
+}
+
+.text_area_info6 {
+	margin: 6px 0px 0px 0px;
+	margin-left: 6.5em;
+	text-indent: -6.5em;
+}
+
+.text_area_info7 {
+	margin: 0px 0px 3px 0px;
+	font-size: 1.1em;
+}
+
+.text_area_info8 {
+	margin: 0px 0px 0px 5px;
+}
+
+.text_area_info9 {
+	margin: 1px 0px 2px 0px;
+	font-size: 1.1em;
+}
+
+table.info {
+vertical-align:top;
+    margin-left:auto;
+	margin-right:auto;
+	text-align: left;
+	width: 500px;
+	border: 0px;
+	margin-top: 20px
+}
+
+table.info_2 {
+    margin-left:auto;
+	margin-right:auto;
+	text-align: left;
+	width: 500px;
+	border: 0px;
+	margin-top: 20px
+}
+
+.info td{
+    width: 232px;
+    text-align:left ;
+    vertical-align:middle;
+}
+
+#contents_main h2 {
+	text-align: left;
+	padding: 10px 0px 2px 30px;
+	font-size: 18px;
+	margin: 15px 0px 0px 24px;
+	font-weight: bold;
+	height: 24px;
+	background-image: url(../images/h2_bg.gif);
+	background-position: left 7px;
+	background-repeat: no-repeat;
+	color: #238C00;
+}
+
+
+/*----バナー表示修正20071031------*/
+/*--新しいスタイルは以下のみ-*/
+
+/*--エリア--*/
+
+table.bn_area{
+	width: 470px;
+}
+
+/*--バナー側td--*/
+td.bn_img{
+width: 180px;
+text-align:left ;
+vertical-align:top;
+padding-top:20px;
+}
+
+/*--テキスト側td--*/
+td.bn_txt{
+width: 290px;
+text-align:left ;
+vertical-align:top;
+padding-top:20px;
+}
+
+/*--文字表示--*/
+.bn_title {
+margin-bottom:2px;
+	font-size: 1.1em;
+}
+.bn_day {
+	margin: 1px 0px;
+	font-weight:bold;}
+
+/*-----年度分けリンク追加20091008-----*/
+
+.link_year ul {
+	text-align:center;
+		margin:20px 0 10px;
+}
+
+.link_year ul li {
+	display:inline;
+}
+
+/*--下載--*/
+/*-----------------------------------------------------SPEC */
+#spec { padding:10px 0;}
+#spec table{ margin:0 auto; border-spacing:0; border-bottom:solid #322216 1px;border-left:solid #322216 1px; text-align:center;}
+#spec td, #spec th{ border-spacing:0; border-top:solid #322216 1px;border-right:solid #322216 1px; padding:5px;}
+#spec th{background-color:#E8D9B9;}
+#spec ul{ margin:0 auto; width:440px;text-align:center; margin-top:10px;}
+#spec li{display: inline-block; zoom: 1; *display: inline;height:50px;line-height: 50px;width:128px;overflow: hidden; text-align:center; margin:15px 15px 0 0;}
+#spec li a{ color:#fff; text-decoration:none; display:block;height:50px;line-height: 50px;width:110px; padding-left:18px;
+background: url(../images/icon_dl.jpg) center top no-repeat;text-shadow: 1px 1px 1px #322216;}
