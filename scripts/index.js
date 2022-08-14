@@ -2,21 +2,21 @@
 //================================================================
 //news tab	
 	$(function(){
-		// 預設顯示第一個 Tab
+		// Preset to display the first Tab
 		var _showTab = 0;
 		var $defaultLi = $('ul.tabs li').eq(_showTab).addClass('active');
 		$('.tab_content').eq($defaultLi.index()).siblings().hide();
 		
-		// 當 li 頁籤被點擊時...
-		// 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+		// When the li tab is clicked...
+		// If you want to change it to switch when the li tab is clicked, change click to mouseover
 		$('ul.tabs li.tab').mouseover(function() {
-			// 找出 li 中的超連結 href(#id)
+			// Find the hyperlink href(#id) in li
 			var $this = $(this),
 				_index = $this.index();
-			// 把目前點擊到的 li 頁籤加上 .active
-			// 並把兄弟元素中有 .active 的都移除 class
+			// Add .active to the currently clicked li tab
+			// and remove all sibling elements that have .active in them
 			$this.addClass('active').siblings('.active').removeClass('active');
-			// 淡入相對應的內容並隱藏兄弟元素
+			// Fade in the corresponding content and hide the sibling element
 			$('.tab_content').eq(_index).stop(false, true).fadeIn().siblings().hide();
 
 			return false;
@@ -52,14 +52,14 @@
 $(function(){
 		var $block = $('#fade_pic'), 
 			$ad = $block.find('.ad'),
-			showIndex = 0,			// 預設要先顯示那一張
-			fadeOutSpeed = 1000,	// 淡出的速度
-			fadeInSpeed = 1000,		// 淡入的速度
-			defaultZ = 10,			// 預設的 z-index
+			showIndex = 0,			// Preset to show that one first
+			fadeOutSpeed = 1000,	// Fade out speed
+			fadeInSpeed = 1000,		// Fade in speed
+			defaultZ = 10,			// Preset z-index
 			isHover = false,
-			timer, speed = 3000;	// 計時器及輪播切換的速度
+			timer, speed = 3000;	// Timer and rotation switching speed
 		
-		// 先把其它圖片的變成透明
+		// Turn the other images transparent first
 		$ad.css({
 			opacity: 0,
 			zIndex: defaultZ - 1
@@ -68,27 +68,27 @@ $(function(){
 			zIndex: defaultZ
 		});
 		
-		// 組出右下的按鈕
+		// Group out the lower right button
 		var str = '';
 		for(var i=0;i<$ad.length;i++){
 			str += '<a href="#"><span class="hidden">' + (i + 1) + '</span></a>';
 		}
 		var $controlA = $('#fade_pic').append($('<div class="control">' + str + '</div>').css('zIndex', defaultZ + 1)).find('.control a');
 
-		// 當按鈕被點選時
-		// 若要變成滑鼠滑入來切換時, 可以把 click 換成 mouseover
+		// When the button is clicked
+		// If you want to switch to mouseover, you can replace click with mouseover.
 		$controlA.click(function(){
-			// 取得目前點擊的號碼
+			// Get the current click number
 			showIndex = $(this).text() * 1 - 1;
 			
-			// 顯示相對應的區域並把其它區域變成透明
+			// Show the corresponding area and make the other areas transparent
 			$ad.eq(showIndex).stop().fadeTo(fadeInSpeed, 1, function(){
 				if(!isHover){
-					// 啟動計時器
+					// Start the timer
 					timer = setTimeout(autoClick, speed + fadeInSpeed);
 				}
 			}).css('zIndex', defaultZ).siblings('a').stop().fadeTo(fadeOutSpeed, 0).css('zIndex', defaultZ - 1);
-			// 讓 a 加上 .on
+			// Let a add .on
 			$(this).addClass('on').siblings().removeClass('on');
 
 			return false;
@@ -98,22 +98,22 @@ $(function(){
 
 		$block.hover(function(){
 			isHover = true;
-			// 停止計時器
+			// Stop timer
 			clearTimeout(timer);
 		}, function(){
 			isHover = false;
-			// 啟動計時器
+			// Start the timer
 			timer = setTimeout(autoClick, speed);
 		})
 		
-		// 自動點擊下一個
+		// Auto-click next
 		function autoClick(){
 			if(isHover) return;
 			showIndex = (showIndex + 1) % $controlA.length;
 			$controlA.eq(showIndex).click();
 		}
 		
-		// 啟動計時器
+		// Start the timer
 		timer = setTimeout(autoClick, speed);
 	});
 
@@ -165,33 +165,33 @@ $(function(){
 
 // table color
 $(function(){
- $('tr:odd').addClass('');//偶數行
- $('tr:even').addClass('tr-color');//單數行
+ $('tr:odd').addClass('');//Odd rows
+ $('tr:even').addClass('tr-color');//Even rows
 });
 
 $(function () {
- $('.info-list li:odd').addClass('');//偶數行
- $('.info-list li:even').addClass('even');//單數行
+ $('.info-list li:odd').addClass('');//Odd Rows
+ $('.info-list li:even').addClass('even');//Odd Rows
 });
 
 //================================================================
 //PAGE TAB
 $(function(){
-		// 預設顯示第一個 Tab
+		// Default shows the first Tab
 		var _showTab = 0;
 		var $defaultLi = $('ul.page-tab li').eq(_showTab).addClass('active');
 		$($defaultLi.find('a').attr('href')).siblings().hide();
 		
-		// 當 li 頁籤被點擊時...
-		// 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+		// When the li tab is clicked...
+		// If you want to change it to switch when you mouse over the li tab, change click to mouseover
 		$('ul.page-tab li').click(function() {
-			// 找出 li 中的超連結 href(#id)
+			// Find the hyperlink href(#id) in li
 			var $this = $(this),
 				_clickTab = $this.find('a').attr('href');
-			// 把目前點擊到的 li 頁籤加上 .active
-			// 並把兄弟元素中有 .active 的都移除 class
+			// Add .active to the currently clicked li tabs
+			// and remove all sibling elements that have .active in the class
 			$this.addClass('active').siblings('.active').removeClass('active');
-			// 淡入相對應的內容並隱藏兄弟元素
+			// Fade in the corresponding content and hide the brother element
 			$(_clickTab).stop(false, true).fadeIn().siblings().hide();
 
 			return false;
@@ -200,21 +200,21 @@ $(function(){
 		});
 	});
 $(function(){
-		// 預設顯示第一個 Tab
+		// Default display of the first Tab
 		var _showTab = 0;
 		var $defaultLi = $('ul.cl-tab li').eq(_showTab).addClass('active');
 		$($defaultLi.find('a').attr('href')).siblings().hide();
 		
-		// 當 li 頁籤被點擊時...
-		// 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+		// When the li tab is clicked...
+		// If you want to change it to switch when you mouse over the li tab, change click to mouseover
 		$('ul.cl-tab li').click(function() {
-			// 找出 li 中的超連結 href(#id)
+			// Find the hyperlink href(#id) in li
 			var $this = $(this),
 				_clickTab = $this.find('a').attr('href');
-			// 把目前點擊到的 li 頁籤加上 .active
-			// 並把兄弟元素中有 .active 的都移除 class
+			// Add .active to the currently clicked li tabs
+			// and remove all sibling elements that have .active in the class
 			$this.addClass('active').siblings('.active').removeClass('active');
-			// 淡入相對應的內容並隱藏兄弟元素
+			// Fade in the corresponding content and hide the brother element
 			$(_clickTab).stop(false, true).fadeIn().siblings().hide();
 
 			return false;

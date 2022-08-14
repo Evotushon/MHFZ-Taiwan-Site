@@ -6,5 +6,5 @@ IF someone manages to get the original JP source code directly from some browser
 
 # What has been translated yet?
 
-Nothing.
+Comments in [index.js](scripts/index.js).
 I'm trying to download all the images first, which is simple, but time consuming (I can only download them from my browser's devtools one by one).
